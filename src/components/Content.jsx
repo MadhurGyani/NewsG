@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setParams, setTotalPage } from '../features/Query/QuerySlice';
 import Spinner from './Spinner';
 import axios from 'axios';
-
+import axiosInstance from '../utils/axiosHTTP2';
 const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = 'https://newsapi.org/v2';
 
@@ -33,12 +33,13 @@ function Content({ path }) {
     const fetchData = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`${BASE_URL}/top-headlines`, {
+        const response = await axiosInstance.get(`${BASE_URL}/top-headlines`, {
           params: {
             [param]: value,
             page: page,
             apiKey: API_KEY,
           },
+
         });
         setData(response.data);
         dispatch(setTotalPage({ totalResults: response.data.totalResults }));
