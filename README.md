@@ -11,10 +11,6 @@ A simple React-based News application that fetches and displays top headlines us
 - **Tailwind CSS**: Utility-first CSS framework used for styling.
 - **News API**: External API used to fetch news headlines.
 
-## Demo
-
-You can view a live demo of the News App [here](#). (Replace with your demo link)
-
 ## Installation
 
 1. **Clone the repository:**
