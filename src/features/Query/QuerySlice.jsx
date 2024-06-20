@@ -11,7 +11,7 @@ const querySlice = createSlice({
   initialState,
   reducers: {
     setParams: (state, action) => {
-      state.value = action.payload;
+      state.value = action.payload.toLowerCase();
       state.page = 1; // Reset page to 1 whenever value changes
     },
     setTotalPage: (state, action) => {
