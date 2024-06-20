@@ -5,7 +5,7 @@ import { setParams, setTotalPage } from '../features/Query/QuerySlice';
 import Spinner from './Spinner';
 import axios from 'axios';
 
-const API_KEY = 70209ceda9344ca69ad9c255894f9e2b//import.meta.env.VITE_API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = 'https://newsapi.org/v2';
 
 function Content({ path }) {
