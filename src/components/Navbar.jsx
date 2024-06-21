@@ -1,9 +1,10 @@
-// Navbar.jsx
-
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { setParams } from '../features/Query/QuerySlice';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Navbar = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);

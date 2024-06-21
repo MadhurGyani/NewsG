@@ -56,11 +56,11 @@ function Content({ path }) {
 
   return (
     <div>
-      {isLoading ? 
-        <Spinner /> : 
-        data.articles ? <Cards articles={data.articles} /> : 
-        error ? <div>Error: {error}</div> : 
-        <div>No data available</div>
+      {isLoading ?
+        <Spinner /> :
+        data.articles ? <Cards articles={data.articles} /> :
+          error ? <div className='flex items-center justify-center h-5/6'>Error: {error}</div> :
+            <div>No data available</div>
       }
     </div>
   );

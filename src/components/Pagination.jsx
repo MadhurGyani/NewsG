@@ -12,7 +12,7 @@ const Pagination = () => {
       <button
         type="button"
         className="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none shadow-sm text-xl"
-        onClick={() => 
+        onClick={() =>
           dispatch(decrement())
         }
         disabled={page === 1}
@@ -45,9 +45,9 @@ const Pagination = () => {
       <button
         type="button"
         className="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none shadow-sm text-xl"
-        onClick={() => 
+        onClick={() =>
           dispatch(increment())
-         }
+        }
         disabled={page === totalPage}
       >
         <span aria-hidden="true" className="hidden sm:block">Next</span>

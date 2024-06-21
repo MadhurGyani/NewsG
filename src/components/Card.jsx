@@ -1,6 +1,6 @@
 import React from 'react';
 import news from '../../news.jpg';
-const Card = ({title,img,url,content,description}) => {
+const Card = ({ title, img, url, content, description }) => {
   const src = img ? img : news;
   return (
     <div className="bg-gray-200 max-w-xs shadow-xl border-gray-200 rounded-lg duration-300 hover:scale-105">
@@ -10,11 +10,11 @@ const Card = ({title,img,url,content,description}) => {
       <div className="p-5">
         <a href={url} target="_blank" rel="noopener noreferrer">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
-          {title}
+            {title}
           </h5>
         </a>
         <p className="mb-3 font-normal text-gray-700">
-        {description?description:content ? content.substring(0, 100) + '...' : ''}
+          {description ? description : content ? content.substring(0, 100) + '...' : ''}
         </p>
         <a
           href={url}
@@ -35,7 +35,7 @@ const Card = ({title,img,url,content,description}) => {
         </a>
       </div>
       <div>
-        
+
       </div>
     </div>
   );
