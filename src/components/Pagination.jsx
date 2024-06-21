@@ -8,11 +8,13 @@ const Pagination = () => {
   const page = useSelector((state) => state.query.page);
 
   return (
-    <nav className="flex justify-between items-center gap-x-1 mt-2 py-2 w-11/12 mx-auto ">
+    <nav className="flex justify-between items-center gap-x-1 mt-2 py-2 w-11/12 mx-auto">
       <button
         type="button"
         className="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none shadow-sm text-xl"
-        onClick={() => dispatch(decrement())}
+        onClick={() => 
+          dispatch(decrement())
+        }
         disabled={page === 1}
       >
         <svg
@@ -43,7 +45,9 @@ const Pagination = () => {
       <button
         type="button"
         className="min-h-[38px] min-w-[38px] py-2 px-2.5 inline-flex justify-center items-center gap-x-2 rounded-lg text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none shadow-sm text-xl"
-        onClick={() => dispatch(increment())}
+        onClick={() => 
+          dispatch(increment())
+         }
         disabled={page === totalPage}
       >
         <span aria-hidden="true" className="hidden sm:block">Next</span>
